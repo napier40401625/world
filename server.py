@@ -62,6 +62,28 @@ def deleteCountry(n):
                                 page_number = 0,
                                 page_size = page_size)
 
+@app.route('/editCountryByName/<n>')
+def editCountryByNamePage(n):
+	c = None
+	for x in w:
+		if x['name'] == n:
+			c  = x
+	return render_template('country-edit.html',
+		c = c)
+
+@app.route('/updateCountryByName')
+def updateCountryByNamePage():
+	n = request.args.get('name')
+	c = None
+	for x in w:
+		if x['name'] == n:
+			c = x
+	c['capital'] = request.args.get('capital')
+	c['continent'] = request.args.get('continent')
+	return render_template(
+		'country-edit.html',
+		c = c)
+
 app.run(host='0.0.0.0', port=2525, debug=True)
 
 
