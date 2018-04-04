@@ -49,10 +49,19 @@ def countryByNamePage(n):
 		'country.html',
 		c = c)
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+@app.route('/delete/<n>')
+def deleteCountry(n):
+        i = 0
+        for c in w:
+                if c['name']==n:
+                        break
+                i = i + 1
+        del w[i]
+        return render_template('index.html',
+                               w = w[0:page_size],
+                                page_number = 0,
+                                page_size = page_size)
 
-
-
-
+app.run(host='0.0.0.0', port=2525, debug=True)
 
 
