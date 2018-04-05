@@ -34,3 +34,35 @@ a{
     text-align: center;
     display: inline-block;
 }
+.edit-button{
+    border: solid thin black;
+    padding:1ex;
+    margin: 1ex;
+    border-radius: 0.5ex;
+    width: 8ex;
+    text-align: center;
+    display: inline-block;
+}
+.delete-button{
+    border: solid thin black;
+    padding:1ex;
+    margin: 1ex;
+    border-radius: 0.5ex;
+    width: 8ex;
+    text-align: center;
+    display: inline-block;
+}
+.edit-but{
+    text-align: center;
+    display: inline-block;
+}
+.del{
+    text-align: center;
+    display: inline-block;
+    background-color: #E5E5E5;
+    border: solid thin gray;
+    padding:0.3ex;
+    border-radius: 0.5ex;
+    width: 6ex;
+    color: black;
+}
