@@ -1,16 +1,13 @@
 body{
-	font-family:arial;
+	font-family: arial;
 }
 img.tiny{
-    width: 20px;
-    border: solid thin grey;	
+    width: 30px;
+    border: solid thin grey;
 }
 img.big {
-    width: 200px;
+    width: 250px;
     border: solid thin grey;
-    position: absolute;
-    right: 1ex;
-    top: 1ex;
 }
 
 .properties div div{
@@ -52,6 +49,15 @@ a{
     text-align: center;
     display: inline-block;
 }
+.create-button{
+    border: solid thin black;
+    padding:1ex;
+    margin: 1ex;
+    border-radius: 0.5ex;
+    width: 8ex;
+    text-align: center;
+    display: inline-block;   
+}
 .edit-but{
     text-align: center;
     display: inline-block;
@@ -66,3 +72,18 @@ a{
     width: 6ex;
     color: black;
 }
+.pre-dis{
+    pointer-events: none;
+    cursor: default;
+    text-decoration:none;
+    color:gray;
+}
+.nex-dis{
+    pointer-events: none;
+    cursor: default;
+    text-decoration:none;
+    color: gray;
+}
+
+/*https://stackoverflow.com/questions/2091168/
+how-to-disable-a-link-using-only-css*/

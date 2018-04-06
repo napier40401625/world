@@ -5,6 +5,7 @@
 </head>
 	<body>
 		<h1>{{c['name']}}</h1>
+		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
 		<div class='properties'>
 			<div>
 				<div>Capital</div>
@@ -15,17 +16,30 @@
 				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
 			</div>
 			<div>
+				<div>Area</div>
+				<div>{{"{:,.0f}".format(c["area"])}}</div>
+			</div>
+			<div>
 				<div>Population</div>
-				<div>{{"{:,.0f}".format(c['population'])}}</div>
+				<div>{{"{:,.0f}".format(c["population"])}}</div>
 			</div>
 			<div>
 				<div>GDP (million $)</div>
-				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
+				<div>{{ "{:,.0f}".format(c["gdp"]/1000000) }}</div>
+			</div>
+			<div>
+				<div>TLD</div>
+				<div>{{c["tld"]}}</div>
 			</div>
 		</div>
-		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
 		<div class="edit-button">
 			<a href="/editCountryByName/{{c.name}}">Edit</a>
+		</div>
+		<div class="delete-button">
+			<a href="/delete/{{c.name}}">Delete</a>
+		</div>
+		<div class="create-button">
+			<a href="/createCountry">Create</a>
 		</div>
 	</body>
 </html>

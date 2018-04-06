@@ -3,21 +3,33 @@
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
-	<body>
+<body>
+	<div>
 		<h1>World Factbook</h1>
 		<div>There are {{w|length}} countries in in the world.</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
-				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
+				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny' alt="Avatar">
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
 		<div class='nav_button'>
-			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+			{% if page_number-page_size >= 0 %}
+				<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+			{% else %}
+				<a href='/begin/{{page_number-page_size}}' class="pre-dis">Previous Page</a>
+			{% endif %}
 		</div>
 		<div class='nav_button'>
-			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+			{% if page_number+page_size <= 180 %}
+				<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+			{% else %}
+				<a href='/begin/{{page_number+page_size}}' class="nex-dis">Next Page</a>
+			{% endif %}
 		</div>
-	</body>
+	</div>
+</body>
 </html>
+
+<!-- Referrence: https://stackoverflow.com/questions/34392045/if-condition-inside-html/34392160 -->
