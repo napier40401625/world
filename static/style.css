@@ -84,6 +84,16 @@ a{
     text-decoration:none;
     color: gray;
 }
-
+.sort a{
+    background-color: gray;
+    color: white;
+    padding: 10px 10px;
+    /*text-align: center;*/
+    text-decoration: none;
+}
+.sort a:hover{
+    background-color: gray;
+    color: black;
+}
 /*https://stackoverflow.com/questions/2091168/
 how-to-disable-a-link-using-only-css*/
