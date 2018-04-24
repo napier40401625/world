@@ -1,6 +1,15 @@
 from flask import Flask, render_template, request
 import json
 
+page_number = 10
+w = json.load(open("worldl.json"))
+lota = sorted(list(set([c['name'][0] for c in w])))
+
+print(lota)
+for c in w:
+	c['tld'] = c['tld'][1:]
+page_size = 20
+
 w = json.load(open("worldl.json"))
 for c in w:
 	c['tld'] = c['tld'][1:]
@@ -12,7 +21,19 @@ def mainPage():
 	return render_template('index.html',
 		w = w[0:page_size],
 		page_number = 0,
-		page_size = page_size)
+		page_size = page_size,
+		lota = lota)
+
+@app.route('/Alphabetic/<a>')
+def AlphabeticPage(a):
+	cl = [c for c in w if c['name'][0]==a]
+	return render_template(
+		'continent.html',
+		length_of_cl = len(cl),
+		cl = cl,
+		a = a,
+		lota = lota
+		)
 
 @app.route('/addCountryByName')
 def addCountryByNamePage():
@@ -24,7 +45,7 @@ def addCountryByNamePage():
 	c['area'] = float(request.args.get('area'))
 	c['gdp'] = float(request.args.get('gdp'))
 	c['tld'] = request.args.get('tld')
-	c['population'] = float(request.args.get('population'))
+	c['population'] = int(request.args.get('population'))
 	w.append(c)
 	w.sort(key = lambda c: c['name'])
 	return render_template(

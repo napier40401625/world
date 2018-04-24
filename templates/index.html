@@ -1,4 +1,4 @@
-<!doctype html>
+<! doctype html>
 <html>
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
@@ -6,7 +6,12 @@
 <body>
 	<div>
 		<h1>World Factbook</h1>
-		<div>There are {{w|length}} countries in in the world.</div>
+		<div>
+			{% for s in lota %}
+			<a href="/Alphabetic/{{s}}">{{s}}</a>
+			{% endfor %}
+		</div>
+		<div>There are {{w|length}} countries in this page.</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
