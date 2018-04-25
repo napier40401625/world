@@ -1,5 +1,6 @@
 body{
 	font-family: arial;
+    background-color: #f2f2d9;
 }
 img.tiny{
     width: 30px;
@@ -30,6 +31,13 @@ a{
     width: 15ex;
     text-align: center;
     display: inline-block;
+    background-color: gray;
+}
+.nav_button a{
+    color: white;
+}
+.nav_button a:hover{
+    color: black;
 }
 .edit-button{
     border: solid thin black;
@@ -39,6 +47,13 @@ a{
     width: 8ex;
     text-align: center;
     display: inline-block;
+    background-color: gray;
+}
+.edit-button a{
+    color: white;
+}
+.edit-button a:hover{
+    color: black;
 }
 .delete-button{
     border: solid thin black;
@@ -48,6 +63,13 @@ a{
     width: 8ex;
     text-align: center;
     display: inline-block;
+    background-color: gray;
+}
+.delete-button a{
+    color: white;
+}
+.delete-button a:hover{
+    color: black;
 }
 .create-button{
     border: solid thin black;
@@ -56,7 +78,14 @@ a{
     border-radius: 0.5ex;
     width: 8ex;
     text-align: center;
-    display: inline-block;   
+    display: inline-block; 
+    background-color: gray;  
+}
+.create-button a{
+    color: white;
+}
+.create-button a:hover{
+    color: black;
 }
 .edit-but{
     text-align: center;
