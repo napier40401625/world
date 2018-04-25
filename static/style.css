@@ -2,6 +2,9 @@ body{
 	font-family: arial;
     background-color: #f2f2d9;
 }
+body div h1{
+    text-shadow: -7px 9px 9px #d98ca6;
+}
 img.tiny{
     width: 30px;
     border: solid thin grey;
@@ -9,6 +12,7 @@ img.tiny{
 img.big {
     width: 250px;
     border: solid thin grey;
+    border-radius: 8px;
 }
 
 .properties div div{
@@ -33,6 +37,9 @@ a{
     display: inline-block;
     background-color: gray;
 }
+.nav_button:hover{
+    box-shadow: -7px 9px 9px #d98ca6;
+}
 .nav_button a{
     color: white;
 }
@@ -48,6 +55,9 @@ a{
     text-align: center;
     display: inline-block;
     background-color: gray;
+}
+.edit-button:hover{
+    box-shadow: -7px 9px 9px #d98ca6;
 }
 .edit-button a{
     color: white;
@@ -65,6 +75,9 @@ a{
     display: inline-block;
     background-color: gray;
 }
+.delete-button:hover{
+    box-shadow: -7px 9px 9px #d98ca6;
+}
 .delete-button a{
     color: white;
 }
@@ -79,7 +92,10 @@ a{
     width: 8ex;
     text-align: center;
     display: inline-block; 
-    background-color: gray;  
+    background-color: gray;
+}
+.create-button:hover{
+    box-shadow: -7px 9px 9px #d98ca6;
 }
 .create-button a{
     color: white;
@@ -120,9 +136,15 @@ a{
     /*text-align: center;*/
     text-decoration: none;
 }
+.sort a.active{
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
 .sort a:hover{
     background-color: gray;
     color: black;
+    box-shadow: -3px 5px 5px #d98ca6;
 }
 /*https://stackoverflow.com/questions/2091168/
 how-to-disable-a-link-using-only-css*/
