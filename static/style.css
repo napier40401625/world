@@ -146,5 +146,27 @@ a{
     color: black;
     box-shadow: -3px 5px 5px #d98ca6;
 }
+
+.btn{
+    border: solid thin black;
+    padding:1ex;
+    margin: 1ex;
+    border-radius: 0.5ex;
+    width: 12.5ex;
+    text-align: center;
+    display: inline-block;
+    background-color: gray;
+}
+.btn a{
+    color: white;
+}
+.btn a:hover{
+    color: black;
+}
+.btn:hover{
+    background-color: gray;
+    color: white;
+    box-shadow: -7px 9px 9px #d98ca6;
+}
 /*https://stackoverflow.com/questions/2091168/
 how-to-disable-a-link-using-only-css*/

@@ -29,7 +29,7 @@ def AlphabeticPage(a):
 		lota = lota
 		)
 
-@app.route('/addCountryByName')
+@app.route('/addCountryByName') 
 def addCountryByNamePage():
 	n = request.args.get('country')
 	c = {}
@@ -98,7 +98,8 @@ def deleteCountry(n):
     return render_template('index.html',
         page_number=0,
         page_size=page_size,
-        w = w[0:page_size])
+        w = w[0:page_size],
+        lota = lota)
 
 @app.route('/editCountryByName/<n>')
 def editCountryByNamePage(n):
